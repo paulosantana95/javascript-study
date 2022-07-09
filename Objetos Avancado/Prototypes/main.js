@@ -13,10 +13,10 @@ Pessoa.prototype.nomeCompleto = function () {
 
 
 //instância
-const pessoa1 = new Pessoa('Paulo', 'Santana') // <- Pessoa = Função construtora
-const pessoa2 = new Pessoa('Rannah', 'Dantas') // <- Pessoa = Função construtora
+const pessoa1 = new Pessoa('Paulo', 'Santana'); // <- Pessoa = Função construtora
+const pessoa2 = new Pessoa('Rannah', 'Dantas'); // <- Pessoa = Função construtora
 //Aqui temos uma cadeia: data -> Date.prototype -> Object.prototype
-const data = new Date() // exemplo de instância de função construtora. Onde você chama metodos no objeto date
+const data = new Date(); // exemplo de instância de função construtora. Onde você chama metodos no objeto date
 
 console.dir(pessoa1.nomeCompleto());
 console.dir(data);
