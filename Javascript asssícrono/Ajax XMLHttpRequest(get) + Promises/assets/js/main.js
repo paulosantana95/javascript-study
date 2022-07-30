@@ -43,5 +43,5 @@ async function carregaPagina(el) {
 function loadResult(response) {
   const resultado = document.querySelector('.resultado');
   resultado.innerHTML = response;
-
 }
+
