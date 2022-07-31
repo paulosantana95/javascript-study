@@ -1,3 +1,1 @@
-alert('vem navegador');
-
-console.log('CADE KRL!');
+import './assets/css/style.css';

@@ -1,5 +1,5 @@
 // 705.484.450-52  /  070.987.720-03
-class ValidaCPF {
+export default class ValidaCPF {
   constructor (cpfEnviado) {
     Object.defineProperty(this, 'cpfLimpo', {
       writable: false,
@@ -46,10 +46,11 @@ class ValidaCPF {
   }
 }
 
-const validacpf = new ValidaCPF('705.484.450-52');
 
-if(validacpf.valida()) {
-  console.log('CPF válido');
-} else {
-  console.log('CPF Inválido')
-}
+// const validacpf = new ValidaCPF('705.484.450-52');
+
+// if(validacpf.valida()) {
+//   console.log('CPF válido');
+// } else {
+//   console.log('CPF Inválido')
+// }
