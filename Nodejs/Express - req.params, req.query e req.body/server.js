@@ -1,20 +1,27 @@
 const express = require('express');
 const app = express();
 
-//          Criar   Ler   Atualizar  Deletar
-// CRUD -> CREATE,  READ,  UPDATE,   DELETE
-//          POST     GET     PUT     DELETE
-
-
-// http://meusite.com/ <- GET -> Navegador Entregue a Página /
-// http://meusite.com/sobre <- GET -> Entregue a página /sobre
-// http://meusite.com/contato <- GET -> Entregue a página /contato
-
-// Essas são rotas da da nossa aplicação e o Expresss ajudar a Resolver.
-
 app.get('/', (req, res) => {
-  res.send('Hello world!');
+  res.send(`
+  <form action="/" method="POST">
+  Nome do Cliente: <input type="text" name="nome"> 
+  <button>Enviar</button>
+  </form>
+  `);
 });
+
+app.use(express.urlencoded({ extended: true }));
+
+app.post('/', (req, res) => {
+  console.log(req.body);
+  res.send(`Valor recebido foi: ${req.body.nome}`)
+})
+
+app.get('/testes/:idUsuarios?/:parametro?', (req, res) => {
+  console.log(req.params);
+  console.log(req.query);
+  res.send(req.params);
+})
 
 app.get('/mundo', (req, res) => {
   res.send('Olá mundo!')
