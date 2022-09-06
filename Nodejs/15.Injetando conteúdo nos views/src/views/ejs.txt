@@ -1,0 +1,6 @@
+<% Controle de fluxo (if, for ...) %>
+<%= Renderiza escapando caracteres %>
+<%- Renderiza sem escapar caracteres %>
+<%# Comentário %>
+<%- include('Caminho/Arquivo'); %>
+
